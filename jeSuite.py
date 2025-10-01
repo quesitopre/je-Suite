@@ -1,3 +1,25 @@
-print("please add a new line of code by pushing the comitted changes to the jeSuite repo.")
-print("This will be confirmation that you have sucessfully cloned and can log the changes unto Github.")
-print("hi")
+import sys
+
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+
+
+# Subclass QMainWindow to customize your application's main window
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("My App")
+        button = QPushButton("Press Me!")
+
+# Set the central widget of the Window.
+        self.setCentralWidget(button)
+
+
+app = QApplication(sys.argv)
+
+window = MainWindow()
+window.show()
+
+app.exec()
+
